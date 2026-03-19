@@ -6,19 +6,15 @@ import { usePathname } from 'next/navigation';
 export default function AdminLayout({ children }) {
   const pathname = usePathname();
 
+  // Login පිටුවේදී Sidebar එක පෙන්වන්න එපා
   if (pathname === '/admin/login') {
     return <div className="bg-vikingBlack min-h-screen">{children}</div>;
   }
 
   return (
-    // ... (අනිත් Sidebar කෝඩ් එක ඒ විදිහටමයි)
     <div className="fixed inset-0 z-50 bg-gray-50 flex h-screen overflow-hidden text-black font-sans">
-      {/* Sidebar එක */}
-      <div className="w-64 bg-black text-white flex flex-col shadow-2xl z-20">
-        {/* ... (ඔයාගේ දැනට තියෙන Sidebar කෝඩ් එක) */}
-      </div>
-
-      {/* වම් පැත්තේ මෙනුව (Sidebar) */}
+      
+      {/* වම් පැත්තේ මෙනුව (Sidebar) - එකක් විතරයි මෙතන තියෙන්න ඕනේ */}
       <div className="w-64 bg-black text-white flex flex-col shadow-2xl z-20">
         <div className="p-6 text-xl font-black tracking-widest uppercase border-b border-gray-800">
           Vikings <span className="text-red-600">Admin</span>
