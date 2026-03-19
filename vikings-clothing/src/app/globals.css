@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  /* අපේ Vikings බ්‍රෑන්ඩ් එකේ විශේෂ වර්ණ */
+  --color-vikingBlack: #0a0a0a;
+  --color-vikingWhite: #fafafa;
+  --color-vikingRed: #dc2626;
+}
+
+/* මුළු වෙබ් අඩවියටම අදාළ මූලික සැකසුම් */
+@layer base {
+  body {
+    background-color: var(--color-vikingWhite);
+    color: var(--color-vikingBlack);
+  }
+}
+
+/* ඉතිරි කොටසට යටින් මේක දාන්න */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Cart එක ඇරිලා තියෙද්දී පිටුව scroll වෙන්න බැරි වෙන්න (Optional) */
+body:has(.fixed.inset-0.visible) {
+  overflow: hidden;
+}
